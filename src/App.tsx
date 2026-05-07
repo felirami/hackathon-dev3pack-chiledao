@@ -9,6 +9,7 @@ import {
   Gift,
   GraduationCap,
   Handshake,
+  Mail,
   MapPin,
   Rocket,
   Sparkles,
@@ -217,6 +218,7 @@ function App() {
             <span>Dev3pack x ChileDAO</span>
           </a>
           <div className="nav-links">
+            <a href="#cuenta">Cuenta</a>
             <a href="#agenda">Agenda</a>
             <a href="#tracks">Tracks</a>
             <a href="#recursos">Recursos</a>
@@ -278,6 +280,53 @@ function App() {
           <strong>
             {countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s
           </strong>
+        </div>
+      </section>
+
+      <section className="section account-section" id="cuenta">
+        <div className="account-card">
+          <div className="account-icon" aria-hidden="true">
+            <Mail size={24} />
+          </div>
+          <div className="account-copy">
+            <p className="kicker">Configuración final de tu cuenta</p>
+            <h2>Termina tu perfil para participar oficialmente.</h2>
+            <p>
+              Para optar a los premios, necesitas completar tu perfil dentro de la
+              plataforma de Dev3pack antes de enviar el proyecto.
+            </p>
+            <ul className="setup-list">
+              <li>
+                <CheckCircle2 size={16} />
+                <span>
+                  Busca en tu correo el asunto{" "}
+                  <code>Fw: You're in - complete your account setup</code>.
+                </span>
+              </li>
+              <li>
+                <CheckCircle2 size={16} />
+                <span>
+                  Revisa SPAM o correos no deseados; a veces el mensaje llega ahí.
+                </span>
+              </li>
+              <li>
+                <CheckCircle2 size={16} />
+                <span>
+                  Entra al enlace <code>Complete your setup</code> y completa tus datos.
+                </span>
+              </li>
+            </ul>
+            <div className="account-help">
+              <strong>¿Problemas?</strong>
+              <span>
+                Si no encuentras el correo o el enlace falla, ven al Hub el viernes 8 de
+                mayo y lo resolvemos juntos en un minuto.
+              </span>
+            </div>
+          </div>
+          <a className="btn primary account-button" href={links.dashboard} target="_blank" rel="noreferrer">
+            Abrir Dev3pack <ExternalLink size={17} />
+          </a>
         </div>
       </section>
 

@@ -290,6 +290,97 @@ h3 {
   padding: 96px 0;
 }
 
+.account-section {
+  padding-bottom: 72px;
+}
+
+.account-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: start;
+  border: 1px solid rgba(102, 227, 189, 0.32);
+  border-radius: 8px;
+  background:
+    linear-gradient(120deg, rgba(102, 227, 189, 0.16), rgba(110, 199, 247, 0.08) 52%, rgba(255, 123, 114, 0.08)),
+    rgba(33, 31, 40, 0.9);
+  padding: 28px;
+}
+
+.account-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  background: rgba(102, 227, 189, 0.14);
+  color: var(--mint);
+}
+
+.account-copy h2 {
+  max-width: 780px;
+  margin: 8px 0 14px;
+  font-size: clamp(1.95rem, 4vw, 3.6rem);
+}
+
+.account-copy p {
+  max-width: 760px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.setup-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 18px;
+}
+
+.setup-list li {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  color: #efe9f6;
+  line-height: 1.45;
+}
+
+.setup-list svg {
+  color: var(--mint);
+  margin-top: 2px;
+}
+
+.setup-list code {
+  display: inline;
+  padding: 2px 5px;
+  border-radius: 6px;
+  background: rgba(248, 244, 234, 0.09);
+  color: #fff6cf;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 0.92em;
+  word-break: break-word;
+}
+
+.account-help {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 780px;
+  border-left: 3px solid var(--amber);
+  padding: 12px 14px;
+  background: rgba(244, 196, 92, 0.1);
+  color: #f2ecda;
+  line-height: 1.5;
+}
+
+.account-help strong {
+  color: var(--amber);
+}
+
+.account-button {
+  white-space: nowrap;
+}
+
 .intro-grid {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -651,6 +742,7 @@ footer p {
   }
 
   .intro-grid,
+  .account-card,
   .schedule-grid {
     grid-template-columns: 1fr;
   }
@@ -703,6 +795,7 @@ footer p {
   }
 
   .section-heading.split,
+  .account-help,
   .featured-perk,
   footer {
     align-items: flex-start;
