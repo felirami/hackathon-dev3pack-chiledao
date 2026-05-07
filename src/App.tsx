@@ -166,15 +166,20 @@ const perks = [
   ["v0", "$30 en créditos, próximamente", "https://v0.dev/"],
 ];
 
-const partners = [
-  "Dev3pack",
-  "ChileDAO",
+const partnerLogos = [
+  { name: "Dev3pack", src: "/logos/dev3pack.png", className: "wide" },
+  { name: "ChileDAO", src: "/logos/chiledao.png", className: "compact" },
+  { name: "NodoZero", src: "/logos/nodozero.png", className: "compact" },
+  { name: "MBA USACH", src: "/logos/mba-usach.png", className: "wide" },
+  { name: "Red de Mentores MBA USACH", src: "/logos/red-mentores.png", className: "wide" },
+  { name: "Build Buddies Santiago", src: "/logos/build-buddies.png", className: "tall" },
+];
+
+const ecosystemPartners = [
   "Solana",
   "Vercel",
   "ElevenLabs",
-  "NodoZero",
-  "MBA USACH",
-  "Build Buddies",
+  "USACH",
 ];
 
 function useCountdown() {
@@ -230,6 +235,11 @@ function App() {
           <div className="eyebrow">
             <CalendarDays size={16} />
             Viernes 8 de mayo de 2026 | USACH + virtual
+          </div>
+          <div className="hero-logo-lockup" aria-label="Organizan Dev3pack y ChileDAO">
+            <img className="hero-dev3pack-logo" src="/logos/dev3pack.png" alt="Dev3pack" />
+            <span aria-hidden="true">x</span>
+            <img className="hero-chiledao-logo" src="/logos/chiledao.png" alt="ChileDAO" />
           </div>
           <h1>Hackathon IA + Blockchain en Santiago</h1>
           <p className="hero-copy">
@@ -570,10 +580,26 @@ function App() {
         </a>
       </section>
 
-      <section className="partners" aria-label="Organizaciones participantes">
-        {partners.map((partner) => (
-          <span key={partner}>{partner}</span>
-        ))}
+      <section className="partners" aria-labelledby="partners-title">
+        <div className="section-heading split">
+          <div>
+            <p className="kicker">Organizan y acompañan</p>
+            <h2 id="partners-title">El hub chileno conectado al ecosistema global.</h2>
+          </div>
+          <img className="usach-banner" src="/logos/event-banner.png" alt="Universidad de Santiago de Chile" />
+        </div>
+        <div className="logo-grid">
+          {partnerLogos.map((partner) => (
+            <div className={`logo-tile ${partner.className}`} key={partner.name}>
+              <img src={partner.src} alt={partner.name} />
+            </div>
+          ))}
+        </div>
+        <div className="partner-chip-row" aria-label="Sponsors globales">
+          {ecosystemPartners.map((partner) => (
+            <span key={partner}>{partner}</span>
+          ))}
+        </div>
       </section>
 
       <footer>
@@ -581,17 +607,7 @@ function App() {
           <strong>Dev3pack Global Hackathon x ChileDAO</strong>
           <p>Hub Chile, viernes 8 de mayo de 2026, Sala EF402 FAE USACH.</p>
         </div>
-        <p className="attribution">
-          Foto FAE USACH por Fernando Gomez, CC BY-SA 4.0 vía{" "}
-          <a
-            href="https://commons.wikimedia.org/wiki/File:Facultad_de_Administraci%C3%B3n_y_Econom%C3%ADa_USACH.jpg"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Wikimedia Commons
-          </a>
-          .
-        </p>
+        <p className="attribution">Logos y banner desde el kit compartido para el hub Chile.</p>
         <Sparkles className="footer-spark" size={24} aria-hidden="true" />
       </footer>
     </main>
