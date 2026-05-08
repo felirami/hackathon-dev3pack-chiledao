@@ -340,10 +340,10 @@ const submissionChecklist = [
 ];
 
 const felipeHighlights = [
-  "Artista analógico y creador Web3 desde 2021.",
-  "Creador de WarpletScan, W2DBot, Hypersubs y proyectos Farcaster.",
-  "Participante de hackathons en ETHGlobal Buenos Aires 2025 con NeetChat.",
-  "Fundador de Arcabot, explorando agentes de IA para trabajo real.",
+  "Voluntario de apoyo para la jornada en Chile.",
+  "Creador voluntario de este sitio informativo.",
+  "Builder de proyectos Web3, Farcaster y agentes de IA.",
+  "Disponible para orientar y conectar recursos durante el evento.",
 ];
 
 const glossary = [
@@ -978,18 +978,19 @@ function App() {
       <section className="host-section" id="host" aria-labelledby="host-title">
         <div className="host-panel">
           <div className="host-copy">
-            <p className="kicker">Anfitrión local</p>
-            <h2 id="host-title">Quién está detrás de la sede Chile.</h2>
+            <p className="kicker">Aporte voluntario</p>
+            <h2 id="host-title">Quién armó este sitio.</h2>
             <p>
-              Soy Luis Felipe Abarca, felirami en internet: artista, creador y fundador de
-              Arcabot. Vengo del arte NFT, comunidades Web3 y herramientas para Farcaster;
-              hoy trabajo a tiempo completo en agentes de IA y en hacer que más personas puedan
-              construir software útil sin esperar permiso.
+              Soy Luis Felipe Abarca, felirami en internet. Voy a participar como
+              voluntario y armé este sitio para ordenar la información de la sede Chile
+              en español, hacerla más fácil de compartir y ayudar a que más personas
+              lleguen preparadas.
             </p>
             <p>
-              Esta sede existe para que estudiantes, desarrolladores, diseñadores y personas curiosas
-              tengan una entrada real a IA + Blockchain: con mentoría, comunidad, criterio
-              técnico y espacio para preguntar cosas básicas sin vergüenza.
+              La organización de la sede corresponde a Dev3pack, ChileDAO y las comunidades
+              aliadas del evento. Mi aporte aquí es apoyar desde el sitio, compartir contexto
+              y facilitar que estudiantes, desarrolladores, diseñadores y personas curiosas
+              encuentren la información sin perderse.
             </p>
             <div className="host-links">
               <a href={links.felirami} target="_blank" rel="noreferrer">
