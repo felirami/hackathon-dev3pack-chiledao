@@ -91,7 +91,7 @@ a {
 .event-strip,
 .hero-actions,
 .hero-logo-lockup,
-.maker-links,
+.footer-socials,
 .quick-links,
 .panel-title,
 .track-top,
@@ -127,7 +127,7 @@ footer {
 
 .nav-links a:hover,
 .quick-links a:hover,
-.maker-links a:hover,
+.footer-socials a:hover,
 .mini-links a:hover,
 footer a:hover {
   color: var(--mint);
@@ -215,28 +215,6 @@ h3 {
 .hero-chiledao-logo {
   width: 42px;
   height: 42px;
-}
-
-.maker-links {
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.hero-maker-links {
-  margin-top: 24px;
-}
-
-.maker-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 36px;
-  border: 1px solid rgba(248, 244, 234, 0.13);
-  border-radius: 8px;
-  padding: 0 11px;
-  background: rgba(248, 244, 234, 0.06);
-  color: #f5f1e8;
-  font-weight: 800;
 }
 
 .hero-actions {
@@ -345,65 +323,6 @@ h3 {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   padding: 96px 0;
-}
-
-.maker-section {
-  padding-bottom: 72px;
-}
-
-.maker-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 0.95fr;
-  gap: 34px;
-  align-items: stretch;
-  border: 1px solid rgba(110, 199, 247, 0.28);
-  border-radius: 8px;
-  background:
-    linear-gradient(125deg, rgba(110, 199, 247, 0.14), rgba(139, 92, 246, 0.12) 48%, rgba(102, 227, 189, 0.08)),
-    rgba(33, 31, 40, 0.82);
-  padding: 30px;
-}
-
-.maker-copy h2 {
-  max-width: 740px;
-  margin: 8px 0 16px;
-  font-size: clamp(2.2rem, 5vw, 4.4rem);
-}
-
-.maker-copy p {
-  max-width: 680px;
-  color: var(--muted);
-  line-height: 1.65;
-}
-
-.maker-focus-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.maker-focus-grid article {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  min-height: 150px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(18, 16, 22, 0.38);
-  padding: 18px;
-}
-
-.maker-focus-grid svg {
-  color: var(--mint);
-}
-
-.maker-focus-grid strong {
-  font-size: 1.1rem;
-}
-
-.maker-focus-grid span {
-  color: var(--muted);
-  line-height: 1.45;
 }
 
 .account-section {
@@ -885,6 +804,45 @@ footer p {
   margin: 8px 0 0;
 }
 
+.footer-main {
+  display: grid;
+  gap: 22px;
+  max-width: 680px;
+}
+
+.footer-maker {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-maker span {
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.footer-maker p {
+  max-width: 620px;
+  line-height: 1.55;
+}
+
+.footer-socials {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  border: 1px solid rgba(248, 244, 234, 0.13);
+  border-radius: 8px;
+  padding: 0 11px;
+  background: rgba(248, 244, 234, 0.05);
+  color: #f5f1e8;
+  font-weight: 800;
+}
+
 .attribution {
   max-width: 480px;
 }
@@ -912,7 +870,6 @@ footer p {
   }
 
   .intro-grid,
-  .maker-card,
   .account-card,
   .schedule-grid {
     grid-template-columns: 1fr;
@@ -979,7 +936,6 @@ footer p {
   .resource-grid,
   .perk-grid,
   .logo-grid,
-  .maker-focus-grid,
   .community-grid {
     grid-template-columns: 1fr;
   }

@@ -2,7 +2,6 @@ import {
   ArrowRight,
   Blocks,
   Bot,
-  Brush,
   CalendarDays,
   CheckCircle2,
   Clock3,
@@ -19,7 +18,6 @@ import {
   Trophy,
   Users,
 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const links = {
@@ -189,13 +187,6 @@ const ecosystemPartners = [
   "USACH",
 ];
 
-const makerFocus: { name: string; detail: string; Icon: LucideIcon }[] = [
-  { name: "Arte", detail: "interfaces, narrativa visual y cultura digital", Icon: Brush },
-  { name: "Web3", detail: "comunidades, wallets, governance y tooling abierto", Icon: Blocks },
-  { name: "IA", detail: "productos con modelos, copilots y creación asistida", Icon: Sparkles },
-  { name: "Agentes", detail: "sistemas autónomos que observan, deciden y actúan", Icon: Bot },
-];
-
 function useCountdown() {
   const [now, setNow] = useState(Date.now());
 
@@ -232,12 +223,11 @@ function App() {
       <section className="hero" id="inicio">
         <div className="hero-media" aria-hidden="true" />
         <nav className="topbar" aria-label="Navegación principal">
-          <a className="brand" href="#inicio" aria-label="Guía de hackathon por felirami">
-            <span className="brand-mark">fr</span>
-            <span>felirami / hackathon guide</span>
+          <a className="brand" href="#inicio" aria-label="Hackathon Dev3pack x ChileDAO">
+            <span className="brand-mark">D3</span>
+            <span>Dev3pack x ChileDAO</span>
           </a>
           <div className="nav-links">
-            <a href="#felirami">Felirami</a>
             <a href="#cuenta">Cuenta</a>
             <a href="#agenda">Agenda</a>
             <a href="#tracks">Tracks</a>
@@ -249,30 +239,18 @@ function App() {
         <div className="hero-content">
           <div className="eyebrow">
             <CalendarDays size={16} />
-            Guía curada por felirami | Santiago, 8 de mayo de 2026
+            Viernes 8 de mayo de 2026 | USACH + virtual
           </div>
-          <div className="hero-logo-lockup" aria-label="Contexto del hackathon Dev3pack x ChileDAO">
+          <div className="hero-logo-lockup" aria-label="Organizan Dev3pack y ChileDAO">
             <img className="hero-dev3pack-logo" src="/logos/dev3pack.png" alt="Dev3pack" />
             <span aria-hidden="true">x</span>
             <img className="hero-chiledao-logo" src="/logos/chiledao.png" alt="ChileDAO" />
           </div>
-          <h1>Hackathon guide by felirami</h1>
+          <h1>Hackathon IA + Blockchain en Santiago</h1>
           <p className="hero-copy">
-            Soy felirami, developer chileno construyendo cosas en arte, Web3, IA y
-            entornos agénticos. Preparé esta guía para que llegues al hub con cuenta
-            activa, links útiles y un camino claro para shippear.
+            Súmate al hub chileno de la Dev3pack Global Hackathon: arma equipo, aprende
+            vibecoding, construye sobre Solana y compite con builders de todo el mundo.
           </p>
-          <div className="maker-links hero-maker-links">
-            <a href={links.felirami} target="_blank" rel="noreferrer">
-              <Globe2 size={16} /> felirami.com
-            </a>
-            <a href={links.farcaster} target="_blank" rel="noreferrer">
-              Farcaster <ExternalLink size={15} />
-            </a>
-            <a href={links.arcabot} target="_blank" rel="noreferrer">
-              arcabot.ai <Bot size={15} />
-            </a>
-          </div>
           <div className="hero-actions">
             <a className="btn primary" href={links.register} target="_blank" rel="noreferrer">
               Registrarme en Dev3pack <ArrowRight size={18} />
@@ -291,40 +269,6 @@ function App() {
             <span>
               <Users size={17} /> Estudiantes y builders de todas las áreas
             </span>
-          </div>
-        </div>
-      </section>
-
-      <section className="section maker-section" id="felirami">
-        <div className="maker-card">
-          <div className="maker-copy">
-            <p className="kicker">Felirami</p>
-            <h2>Developer chileno construyendo en arte, Web3, IA y entornos agénticos.</h2>
-            <p>
-              También soy fundador de Arcabot, un agente de IA autónomo. Me interesa
-              convertir comunidades, herramientas y prototipos raros en experiencias que
-              la gente pueda usar, remixear y llevar más lejos.
-            </p>
-            <div className="maker-links">
-              <a href={links.felirami} target="_blank" rel="noreferrer">
-                <Globe2 size={16} /> felirami.com
-              </a>
-              <a href={links.farcaster} target="_blank" rel="noreferrer">
-                farcaster.xyz/felirami <ExternalLink size={15} />
-              </a>
-              <a href={links.arcabot} target="_blank" rel="noreferrer">
-                arcabot.ai <Bot size={15} />
-              </a>
-            </div>
-          </div>
-          <div className="maker-focus-grid">
-            {makerFocus.map(({ name, detail, Icon }) => (
-              <article key={name}>
-                <Icon size={20} />
-                <strong>{name}</strong>
-                <span>{detail}</span>
-              </article>
-            ))}
           </div>
         </div>
       </section>
@@ -664,9 +608,29 @@ function App() {
       </section>
 
       <footer>
-        <div>
-          <strong>Guía de hackathon por felirami</strong>
-          <p>Hackathon Dev3pack x ChileDAO, viernes 8 de mayo de 2026, Sala EF402 FAE USACH.</p>
+        <div className="footer-main">
+          <div className="footer-event">
+            <strong>Dev3pack Global Hackathon x ChileDAO</strong>
+            <p>Hub Chile, viernes 8 de mayo de 2026, Sala EF402 FAE USACH.</p>
+          </div>
+          <div className="footer-maker">
+            <span>Website hecho por felirami</span>
+            <p>
+              Developer chileno construyendo en arte, Web3, IA y entornos agénticos.
+              Fundador de Arcabot.
+            </p>
+            <div className="footer-socials">
+              <a href={links.felirami} target="_blank" rel="noreferrer">
+                <Globe2 size={16} /> felirami.com
+              </a>
+              <a href={links.farcaster} target="_blank" rel="noreferrer">
+                Farcaster <ExternalLink size={15} />
+              </a>
+              <a href={links.arcabot} target="_blank" rel="noreferrer">
+                arcabot.ai <Bot size={15} />
+              </a>
+            </div>
+          </div>
         </div>
         <p className="attribution">Logos y banner desde el kit compartido para el hub Chile.</p>
         <Sparkles className="footer-spark" size={24} aria-hidden="true" />
