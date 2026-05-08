@@ -15,6 +15,7 @@ import {
   Globe2,
   GraduationCap,
   Handshake,
+  Languages,
   Lightbulb,
   ListChecks,
   Mail,
@@ -48,6 +49,14 @@ const links = {
   farcaster: "https://farcaster.xyz/felirami",
   arcabot: "https://arcabot.ai",
   github: "https://github.com/felirami/hackathon-dev3pack-chiledao",
+  openCode: "https://opencode.ai/",
+  openRouter: "https://openrouter.ai/docs",
+  hermesAgent: "https://hermes-agent.org/",
+  openClaw: "https://github.com/openclaw/openclaw",
+  cline: "https://cline.bot/",
+  aider: "https://aider.chat/",
+  continueDev: "https://www.continue.dev/",
+  ollama: "https://ollama.com/",
 };
 
 const eventStart = new Date("2026-05-08T14:00:00-04:00").getTime();
@@ -67,32 +76,32 @@ const tracks: Track[] = [
     amount: "$10.000",
     headline: "Mejor app general en Solana",
     detail:
-      "Construye un proyecto open-source que reimagine pagos, DeFi, mobile apps o colaboración digital sobre Solana.",
+      "Construye un proyecto de código abierto que reimagine pagos, DeFi, apps móviles o colaboración digital sobre Solana.",
     prizes: [
       "1er lugar: $3.000",
       "2do lugar: $2.500",
       "3er lugar: $1.500",
-      "Top 10: Ledger por integrante",
-      "Top 30: pool de $2.500 para un mes de Claude Pro",
-      "Bonus: $500 por mejor uso de x402 en Solana",
+      "10 mejores: Ledger por integrante",
+      "30 mejores: fondo de $2.500 para un mes de Claude Pro",
+      "Bono: $500 por mejor uso de x402 en Solana",
     ],
     resources: [
-      { label: "Solana Quick Start", href: "https://solana.com/docs/intro/quick-start" },
-      { label: "Solana Skills", href: "https://solana.com/skills" },
+      { label: "Guía rápida de Solana", href: "https://solana.com/docs/intro/quick-start" },
+      { label: "Cursos Solana", href: "https://solana.com/skills" },
       { label: "solana.new", href: "https://solana.new/" },
     ],
   },
   {
     name: "LI.FI",
     amount: "$1.000",
-    headline: "Mejor UX cross-chain en Solana",
+    headline: "Mejor experiencia entre cadenas en Solana",
     detail:
-      "Usa LI.FI para mejorar onboarding, swaps, bridging, pagos o ejecución de transacciones en una app, workflow o agente.",
+      "Usa LI.FI para mejorar incorporación, intercambios, puentes, pagos o ejecución de transacciones en una app, flujo de trabajo o agente.",
     prizes: ["1er lugar: $500", "2do lugar: $300", "3er lugar: $200"],
     resources: [
-      { label: "Widget Overview", href: "https://docs.li.fi/widget/overview" },
-      { label: "SDK Overview", href: "https://docs.li.fi/sdk/overview" },
-      { label: "Agent Skills", href: "https://github.com/lifinance/lifi-agent-skills" },
+      { label: "Interfaz LI.FI", href: "https://docs.li.fi/widget/overview" },
+      { label: "Kit de desarrollo LI.FI", href: "https://docs.li.fi/sdk/overview" },
+      { label: "Habilidades para agentes", href: "https://github.com/lifinance/lifi-agent-skills" },
     ],
   },
   {
@@ -100,7 +109,7 @@ const tracks: Track[] = [
     amount: "$500",
     headline: "Mejor agente de IA en el mundo físico",
     detail:
-      "Extiende agentes de IA hacia entornos reales: automatización, asistencia, colaboración humano-robot o toma de decisiones con contexto físico.",
+      "Extiende agentes de IA hacia entornos reales: automatización, asistencia, colaboración humano-máquina o toma de decisiones con contexto físico.",
     prizes: ["1er lugar: $500"],
     resources: [
       { label: "Virtuals", href: "https://virtuals.io/" },
@@ -109,77 +118,77 @@ const tracks: Track[] = [
   },
   {
     name: "Solana Mobile",
-    amount: "Seeker phones",
-    headline: "Mejor app mobile construida con Solana Mobile",
+    amount: "Teléfonos Seeker",
+    headline: "Mejor app móvil construida con Solana Mobile",
     detail:
-      "Diseñado para apps móviles en Solana usando Solana Mobile Stack, wallet adapters y experiencia nativa en Android.",
-    prizes: ["1er lugar: Seeker Phones", "2do lugar: Seeker Phones", "3er lugar: Seeker Phones"],
+      "Diseñado para apps móviles en Solana usando la tecnología de Solana Mobile, adaptadores de billetera y experiencia nativa en Android.",
+    prizes: ["1er lugar: teléfonos Seeker", "2do lugar: teléfonos Seeker", "3er lugar: teléfonos Seeker"],
     resources: [
       {
-        label: "Mobile Wallet Adapter",
+        label: "Adaptador móvil de billetera",
         href: "https://docs.solanamobile.com/mobile-wallet-adapter/mobile-apps",
       },
-      { label: "Expo / React Native", href: "https://docs.expo.dev/" },
+      { label: "Expo y React Native", href: "https://docs.expo.dev/" },
       {
-        label: "Development setup",
+        label: "Configuración de desarrollo",
         href: "https://docs.solanamobile.com/get-started/development-setup",
       },
     ],
   },
   {
     name: "ElevenLabs",
-    amount: "Scale tier",
+    amount: "Nivel Scale",
     headline: "Mejor integración de ElevenLabs",
     detail:
-      "Crea agentes naturales en voz o chat con más de 70 idiomas, baja latencia, knowledge base y herramientas conectadas.",
-    prizes: ["Mejor proyecto: 3 meses Scale tier, equivalente a $1.980 por integrante"],
+      "Crea agentes naturales en voz o chat con más de 70 idiomas, baja latencia, base de conocimiento y herramientas conectadas.",
+    prizes: ["Mejor proyecto: 3 meses del nivel Scale, equivalente a $1.980 por integrante"],
     resources: [
-      { label: "Quickstart", href: "https://elevenlabs.io/docs/eleven-agents/quickstart" },
-      { label: "Agents Docs", href: "https://elevenlabs.io/docs/conversational-ai/docs/introduction" },
-      { label: "API Reference", href: "https://elevenlabs.io/docs/api-reference/introduction" },
+      { label: "Inicio rápido", href: "https://elevenlabs.io/docs/eleven-agents/quickstart" },
+      { label: "Documentación de agentes", href: "https://elevenlabs.io/docs/conversational-ai/docs/introduction" },
+      { label: "Referencia de API", href: "https://elevenlabs.io/docs/api-reference/introduction" },
     ],
   },
 ];
 
 const localAgenda = [
   ["14:00", "Llegada y registro de asistentes"],
-  ["14:15", "Presentación de hackathon, sponsors y tracks"],
+  ["14:15", "Presentación de la hackathon, patrocinadores y categorías"],
   ["14:30", "Intro a Blockchain, IA y casos de uso"],
   ["15:00", "Actividad de ideas"],
-  ["15:15", "Coffee break y formación de equipos"],
-  ["15:40", "Entorno de desarrollo y submissions Dev3pack"],
-  ["16:00", "Vibecoding: uso de IA para desarrollar"],
-  ["16:20", "Hack con mentoría y asistencia técnica"],
+  ["15:15", "Pausa de café y formación de equipos"],
+  ["15:40", "Entorno de desarrollo y entregas en Dev3pack"],
+  ["16:00", "Desarrollo con IA: cómo construir con asistentes"],
+  ["16:20", "Construcción con mentoría y asistencia técnica"],
 ];
 
 const globalAgenda = [
-  ["Vie 8, 10:00", "Kickoff global"],
+  ["Vie 8, 10:00", "Inicio global"],
   ["Vie 8, 11:00", "Ideación y formación de equipos"],
-  ["Sáb 9, 10:00", "Feedback de proyectos"],
-  ["Dom 10, 03:00", "Bloque de submissions en Dev3pack"],
+  ["Sáb 9, 10:00", "Retroalimentación de proyectos"],
+  ["Dom 10, 03:00", "Bloque de entregas en Dev3pack"],
   ["Dom 10, 12:00", "Cierre global y ganadores preliminares"],
-  ["Mar 12, 10:00", "Global Demo Day"],
+  ["Mar 12, 10:00", "Día global de demostraciones"],
 ];
 
 const resources = [
-  ["NoahAI", "Vibe code de A a Z para tu primer proyecto Solana", "https://trynoah.ai/"],
+  ["NoahAI", "Desarrollo con IA de A a Z para tu primer proyecto Solana", "https://trynoah.ai/"],
   ["Colosseum Copilot", "Presiona tu idea contra datos de hackathons Solana", "https://colosseum.com/copilot"],
-  ["Superteam Ideas", "Ideas listas para builders de DeFi, pagos, consumer y más", "https://superteam.fun/build/ideas"],
-  ["Solana Playground", "IDE de navegador para codear y desplegar", "https://beta.solpg.io/"],
-  ["Create Solana dApp", "Scaffold de app Solana en un comando", "https://github.com/solana-foundation/create-solana-dapp"],
-  ["x402 en Solana", "Pagos internet-native para APIs y agentes", "https://solana.com/x402"],
-  ["Phantom Connect", "Integración recomendada de wallet", "https://docs.phantom.com/phantom-connect"],
-  ["Awesome Solana AI", "Lista curada de herramientas AI para Solana", "https://github.com/solana-foundation/awesome-solana-ai"],
+  ["Superteam Ideas", "Ideas listas para DeFi, pagos, consumo y más", "https://superteam.fun/build/ideas"],
+  ["Solana Playground", "Entorno web para programar y desplegar", "https://beta.solpg.io/"],
+  ["Create Solana dApp", "Plantilla inicial de app Solana en un comando", "https://github.com/solana-foundation/create-solana-dapp"],
+  ["x402 en Solana", "Pagos nativos de internet para APIs y agentes", "https://solana.com/x402"],
+  ["Phantom Connect", "Integración recomendada de billetera", "https://docs.phantom.com/phantom-connect"],
+  ["Awesome Solana AI", "Lista curada de herramientas de IA para Solana", "https://github.com/solana-foundation/awesome-solana-ai"],
 ];
 
 const perks = [
-  ["Noah AI", "Acceso gratis con email de hackathon", "https://forms.gle/LNDjeS8YY8kvqb328"],
-  ["ElevenLabs", "Un mes Creator plan", "https://discord.com/invite/VnBvbbcdEC"],
-  ["QuickNode", "Dos meses del Build plan", "https://quiknode.typeform.com/dev3pack"],
+  ["Noah AI", "Acceso gratis con correo de hackathon", "https://forms.gle/LNDjeS8YY8kvqb328"],
+  ["ElevenLabs", "Un mes del plan Creator", "https://discord.com/invite/VnBvbbcdEC"],
+  ["QuickNode", "Dos meses del plan Build", "https://quiknode.typeform.com/dev3pack"],
   ["Cursor Pro", "Un año gratis para países elegibles", "https://cursor.com/en-US/students"],
-  ["Notion Plus", "Plan education gratuito", "https://www.notion.com/product/notion-for-education"],
+  ["Notion Plus", "Plan educativo gratuito", "https://www.notion.com/product/notion-for-education"],
   ["GitHub Dev Pack", "Copilot, Azure, MongoDB y más", "https://education.github.com/pack"],
-  ["Figma Pro", "Plan Education", "https://www.figma.com/education/apply"],
+  ["Figma Pro", "Plan educativo", "https://www.figma.com/education/apply"],
   ["Firecrawl", "20k créditos y API para estudiantes", "https://www.firecrawl.dev/student-program"],
   ["AWS", "Hasta $100 en créditos", "https://aws.amazon.com/education/awseducate/"],
   ["v0", "$30 en créditos, próximamente", "https://v0.dev/"],
@@ -205,69 +214,177 @@ const beginnerSteps = [
   {
     icon: Lightbulb,
     title: "Parte por un problema chico",
-    text: "Elige algo concreto: una app de pagos para una feria, un asistente de voz para trámites, un dashboard de comunidad o una herramienta para estudiantes.",
+    text: "Elige algo concreto: una app de pagos para una feria, un asistente de voz para trámites, un panel de comunidad o una herramienta para estudiantes.",
   },
   {
     icon: MessageSquareText,
-    title: "Explícaselo a la IA como a un teammate",
+    title: "Explícaselo a la IA como a una compañera",
     text: "Describe usuario, objetivo, datos, pantallas y restricciones. Pide primero un plan simple, luego código por partes y pruebas rápidas.",
   },
   {
     icon: Wrench,
     title: "Arma un prototipo usable",
-    text: "No necesitas una empresa completa. Necesitas una demo que abra, haga una cosa importante y muestre por qué Blockchain o IA aportan algo real.",
+    text: "No necesitas una empresa completa. Necesitas una demostración que abra, haga una cosa importante y muestre por qué Blockchain o IA aportan algo real.",
   },
   {
     icon: Presentation,
-    title: "Cuenta la historia del demo",
-    text: "Prepara problema, solución, cómo funciona, qué track compite, qué aprendiste y qué harías si tuvieras una semana más.",
+    title: "Cuenta la historia de la demostración",
+    text: "Prepara problema, solución, cómo funciona, en qué categoría compite, qué aprendiste y qué harías si tuvieras una semana más.",
   },
 ];
 
 const technicalChecklist = [
   {
     icon: Github,
-    title: "Repo público",
-    text: "Código open-source con instrucciones para instalar, correr y revisar el demo.",
+    title: "Repositorio público",
+    text: "Código abierto con instrucciones para instalar, correr y revisar la demostración.",
   },
   {
     icon: FileCheck2,
     title: "README claro",
-    text: "Problema, solución, stack, track elegido, links, integrantes y limitaciones honestas.",
+    text: "Problema, solución, tecnología usada, categoría elegida, enlaces, integrantes y limitaciones honestas.",
   },
   {
     icon: TerminalSquare,
-    title: "Demo reproducible",
-    text: "Deploy, video corto o pasos locales. Evita que el jurado tenga que adivinar.",
+    title: "Demostración reproducible",
+    text: "Despliegue, video corto o pasos locales. Evita que el jurado tenga que adivinar.",
   },
   {
     icon: ShieldCheck,
     title: "Web3 sin humo",
-    text: "Si usas wallets, APIs, agentes o transacciones, explica qué es real, qué es mock y qué red usa.",
+    text: "Si usas billeteras, APIs, agentes o transacciones, explica qué es real, qué es simulado y qué red usa.",
   },
 ];
 
 const builderModes = [
   ["Nunca programé", "Usa NoahAI, v0 o Cursor para crear pantallas, conectar lógica básica y pedir explicaciones línea por línea."],
-  ["Diseño/producto", "Convierte el dolor del usuario en flujo, copy, demo y pitch. Un buen prototipo necesita criterio, no solo código."],
-  ["IT/dev", "Asegura arquitectura simple, README sólido, variables de entorno limpias, deploy estable y una integración técnica defendible."],
-  ["Founder/comunidad", "Valida si alguien lo usaría, arma narrativa, define métrica de éxito y piensa cómo vive después del domingo."],
+  ["Diseño/producto", "Convierte el dolor del usuario en flujo, textos, demostración y presentación. Un buen prototipo necesita criterio, no solo código."],
+  ["Tecnología/desarrollo", "Asegura arquitectura simple, README sólido, variables de entorno limpias, despliegue estable y una integración técnica defendible."],
+  ["Emprendimiento/comunidad", "Valida si alguien lo usaría, arma narrativa, define métrica de éxito y piensa cómo vive después del domingo."],
+];
+
+const aiTools = [
+  {
+    name: "OpenCode",
+    cost: "gratis y código abierto",
+    fit: "Agente de desarrollo en terminal, editor o escritorio.",
+    detail:
+      "Buena primera opción técnica: trabaja sobre el repositorio, permite usar modelos gratis o locales y no exige cambiar de editor.",
+    href: links.openCode,
+  },
+  {
+    name: "OpenRouter",
+    cost: "modelos gratis con límites",
+    fit: "Una API para probar muchos modelos sin casarse con un proveedor.",
+    detail:
+      "No es una herramienta de código abierto; se incluye porque permite usar rutas y variantes gratuitas para aprender y prototipar.",
+    href: links.openRouter,
+  },
+  {
+    name: "Ollama",
+    cost: "gratis y local",
+    fit: "Modelos en tu computador para privacidad y bajo costo.",
+    detail:
+      "Ideal si el equipo tiene buen hardware y quiere experimentar sin enviar código o datos a servicios externos.",
+    href: links.ollama,
+  },
+  {
+    name: "Aider",
+    cost: "gratis y código abierto",
+    fit: "Programación en pareja desde la terminal con Git.",
+    detail:
+      "Funciona bien para cambios revisables, pruebas y refactors porque trabaja directamente con commits y archivos reales.",
+    href: links.aider,
+  },
+  {
+    name: "Cline",
+    cost: "gratis y código abierto",
+    fit: "Agente dentro del editor con aprobación humana.",
+    detail:
+      "Útil para personas que quieren ver cada lectura, edición y comando antes de permitir que la IA actúe.",
+    href: links.cline,
+  },
+  {
+    name: "Continue",
+    cost: "gratis y código abierto",
+    fit: "Asistente configurable para VS Code y JetBrains.",
+    detail:
+      "Buen puente para equipos mixtos: chat, autocompletado y modelos locales o de API con configuración compartible.",
+    href: links.continueDev,
+  },
+  {
+    name: "Hermes Agent",
+    cost: "gratis y autoalojado",
+    fit: "Agente persistente para equipos con experiencia operando infraestructura.",
+    detail:
+      "Potente, pero avanzado: úsalo con permisos limitados, claves separadas y revisión humana de acciones importantes.",
+    href: links.hermesAgent,
+  },
+  {
+    name: "OpenClaw",
+    cost: "gratis y código abierto",
+    fit: "Asistente personal autoalojado para automatización.",
+    detail:
+      "Inclúyelo solo si el equipo entiende los riesgos de agentes con acceso a archivos, navegador, mensajes y credenciales.",
+    href: links.openClaw,
+  },
 ];
 
 const submissionChecklist = [
   "Completa tu perfil y equipo en Dev3pack.",
-  "Elige uno o más tracks solo si puedes justificar el uso real.",
-  "Publica el repo y agrega licencia o nota open-source.",
-  "Incluye link de demo, video o capturas en el README.",
+  "Elige una o más categorías solo si puedes justificar el uso real.",
+  "Publica el repositorio y agrega licencia o nota de código abierto.",
+  "Incluye enlace de demostración, video o capturas en el README.",
   "Documenta qué partes fueron hechas con IA y qué decisiones tomó el equipo.",
-  "Sube la entrega en la plataforma antes del bloque oficial de submissions.",
+  "Sube la entrega en la plataforma antes del bloque oficial de entregas.",
 ];
 
 const felipeHighlights = [
-  "Artista analógico y builder Web3 desde 2021.",
+  "Artista analógico y creador Web3 desde 2021.",
   "Creador de WarpletScan, W2DBot, Hypersubs y proyectos Farcaster.",
-  "Hackathon builder en ETHGlobal Buenos Aires 2025 con NeetChat.",
+  "Participante de hackathons en ETHGlobal Buenos Aires 2025 con NeetChat.",
   "Fundador de Arcabot, explorando agentes de IA para trabajo real.",
+];
+
+const glossary = [
+  ["Hackathon", "maratón de creación o competencia de prototipos"],
+  ["Global Hackathon", "hackathon global"],
+  ["Hub", "sede local o punto de encuentro"],
+  ["Builder", "persona que construye proyectos"],
+  ["Track", "categoría de competencia"],
+  ["Perks", "beneficios, créditos o descuentos"],
+  ["Open-source", "código abierto"],
+  ["Vibe coding", "desarrollo conversacional con IA"],
+  ["Dashboard", "panel de control"],
+  ["Submissions", "entregas"],
+  ["Quick Start", "guía rápida"],
+  ["SDK", "kit de desarrollo de software"],
+  ["Agent", "agente"],
+  ["Demo", "demostración"],
+  ["Deploy", "despliegue"],
+  ["README", "archivo de presentación del proyecto"],
+  ["API", "interfaz para conectar software"],
+  ["App", "aplicación"],
+  ["Chat", "conversación digital"],
+  ["IDE", "entorno de desarrollo integrado"],
+  ["DeFi", "finanzas descentralizadas"],
+  ["Software", "programas o sistemas digitales"],
+  ["Claude Pro", "plan Pro de Claude"],
+  ["GitHub Dev Pack", "paquete de herramientas para desarrolladores"],
+  ["Copilot", "asistente de programación"],
+  ["Wallet", "billetera digital"],
+  ["Mobile", "móvil"],
+  ["Scale tier", "nivel Scale"],
+  ["Build plan", "plan Build"],
+  ["Creator plan", "plan Creator"],
+  ["Developer", "desarrollador o desarrolladora"],
+  ["Website", "sitio web"],
+  ["Cash", "dinero en efectivo"],
+  ["Networking", "conexión profesional"],
+  ["Blockchain", "cadena de bloques"],
+  ["Web3", "web descentralizada con propiedad digital"],
+  ["NFT", "token no fungible"],
+  ["FAQ", "preguntas frecuentes"],
 ];
 
 function useCountdown() {
@@ -314,10 +431,10 @@ function App() {
             <a href="#cuenta">Cuenta</a>
             <a href="#guia">Guía</a>
             <a href="#agenda">Agenda</a>
-            <a href="#tracks">Tracks</a>
-            <a href="#recursos">Recursos</a>
+            <a href="#tracks">Categorías</a>
+            <a href="#ia-abierta">IA gratis</a>
             <a href="#entrega">Entrega</a>
-            <a href="#perks">Perks</a>
+            <a href="#glosario">Glosario</a>
           </div>
         </nav>
 
@@ -333,8 +450,8 @@ function App() {
           </div>
           <h1>Hackathon IA + Blockchain en Santiago</h1>
           <p className="hero-copy">
-            Súmate al hub chileno de la Dev3pack Global Hackathon: arma equipo, aprende
-            vibecoding, construye sobre Solana y compite con builders de todo el mundo.
+            Súmate a la sede chilena: arma equipo, aprende desarrollo con IA, construye
+            sobre Solana y compite con personas de todo el mundo.
           </p>
           <div className="hero-actions">
             <a className="btn primary" href={links.register} target="_blank" rel="noreferrer">
@@ -352,7 +469,7 @@ function App() {
               <Clock3 size={17} /> 14:00 a 18:00 hora Chile
             </span>
             <span>
-              <Users size={17} /> Estudiantes y builders de todas las áreas
+              <Users size={17} /> Todas las áreas y niveles
             </span>
           </div>
         </div>
@@ -361,22 +478,22 @@ function App() {
       <section className="stats-band" aria-label="Resumen global">
         <div className="stat">
           <span>30+</span>
-          <p>hubs satélite en el mundo</p>
+          <p>sedes satélite en el mundo</p>
         </div>
         <div className="stat">
-          <span>$10K+</span>
-          <p>premios cash confirmados</p>
+          <span>US$10 mil+</span>
+          <p>premios en efectivo confirmados</p>
         </div>
         <div className="stat">
-          <span>May 12</span>
-          <p>Global Demo Day</p>
+          <span>12 may</span>
+          <p>día global de demostraciones</p>
         </div>
         <div className="stat">
           <span>$2.500+</span>
-          <p>perks por estudiante</p>
+          <p>beneficios por estudiante</p>
         </div>
         <div className="countdown">
-          <p>{countdown.done ? "La hackathon ya comenzó" : "Cuenta regresiva al hub presencial"}</p>
+          <p>{countdown.done ? "La hackathon ya comenzó" : "Cuenta regresiva a la sede presencial"}</p>
           <strong>
             {countdown.days}d {countdown.hours}h {countdown.minutes}m {countdown.seconds}s
           </strong>
@@ -400,7 +517,8 @@ function App() {
                 <CheckCircle2 size={16} />
                 <span>
                   Busca en tu correo el asunto{" "}
-                  <code>Fw: You're in - complete your account setup</code>.
+                  <code>Fw: You're in - complete your account setup</code>{" "}
+                  <em>(traducción: estás dentro, completa la configuración de tu cuenta)</em>.
                 </span>
               </li>
               <li>
@@ -412,14 +530,15 @@ function App() {
               <li>
                 <CheckCircle2 size={16} />
                 <span>
-                  Entra al enlace <code>Complete your setup</code> y completa tus datos.
+                  Entra al enlace <code>Complete your setup</code>{" "}
+                  <em>(traducción: completa tu configuración)</em> y completa tus datos.
                 </span>
               </li>
             </ul>
             <div className="account-help">
               <strong>¿Problemas?</strong>
               <span>
-                Si no encuentras el correo o el enlace falla, ven al Hub el viernes 8 de
+                Si no encuentras el correo o el enlace falla, ven a la sede el viernes 8 de
                 mayo y lo resolvemos juntos en un minuto.
               </span>
             </div>
@@ -438,8 +557,8 @@ function App() {
         <div className="intro-copy">
           <p>
             ChileDAO trae una jornada presencial con soporte humano real, mentoría técnica,
-            networking y arranque de hackeo. La competencia sigue virtualmente hasta el
-            domingo 10 de mayo para terminar tu entrega.
+            conexiones profesionales y arranque de construcción. La competencia sigue
+            virtualmente hasta el domingo 10 de mayo para terminar tu entrega.
           </p>
           <div className="quick-links">
             <a href={links.whatsapp} target="_blank" rel="noreferrer">
@@ -469,12 +588,12 @@ function App() {
           <article className="guide-panel">
             <div className="panel-title">
               <Route size={21} />
-              <h3>Si nunca has vibe coded</h3>
+              <h3>Si nunca has desarrollado con IA</h3>
             </div>
             <p>
-              Vibe coding es construir conversando con herramientas de IA. Tu trabajo
-              no es saber cada comando: es explicar bien el problema, probar lo que
-              sale y mejorar el prototipo con criterio.
+              El desarrollo conversacional con IA consiste en construir conversando con
+              herramientas de IA. Tu trabajo no es saber cada comando: es explicar bien
+              el problema, probar lo que sale y mejorar el prototipo con criterio.
             </p>
             <div className="step-list">
               {beginnerSteps.map((step, index) => {
@@ -495,10 +614,10 @@ function App() {
           <article className="guide-panel">
             <div className="panel-title">
               <BrainCircuit size={21} />
-              <h3>Si vienes de IT o ya programas</h3>
+              <h3>Si vienes de tecnología o ya programas</h3>
             </div>
             <p>
-              La ventaja técnica está en reducir scope, integrar bien y entregar algo
+              La ventaja técnica está en reducir alcance, integrar bien y entregar algo
               reproducible. En una hackathon gana el equipo que demuestra valor rápido,
               no el que promete más arquitectura.
             </p>
@@ -535,7 +654,7 @@ function App() {
           <article className="schedule-panel">
             <div className="panel-title">
               <MapPin size={20} />
-              <h3>Hub Chile | FAE USACH</h3>
+              <h3>Sede Chile | FAE USACH</h3>
             </div>
             <p>Sala EF402, Facultad de Administración y Economía.</p>
             <div className="timeline">
@@ -550,9 +669,9 @@ function App() {
           <article className="schedule-panel">
             <div className="panel-title">
               <CalendarDays size={20} />
-              <h3>Global Hackathon</h3>
+              <h3>Hackathon global</h3>
             </div>
-            <p>Sesiones y deadlines visibles en Dev3pack, horario America/Santiago.</p>
+            <p>Sesiones y fechas límite visibles en Dev3pack, horario de Chile.</p>
             <div className="timeline compact">
               {globalAgenda.map(([time, title]) => (
                 <div className="timeline-row" key={time}>
@@ -567,7 +686,7 @@ function App() {
 
       <section className="section tracks-section" id="tracks">
         <div className="section-heading">
-          <p className="kicker">Tracks y premios</p>
+          <p className="kicker">Categorías y premios</p>
           <h2>Escoge el ángulo que más calza con tu equipo.</h2>
         </div>
         <div className="track-grid">
@@ -604,7 +723,7 @@ function App() {
           <GraduationCap size={22} />
           <p>
             Los mejores proyectos también pueden apuntar a Colosseum Accelerator:
-            $250.000 en premios y hasta $2M en financiamiento seed para equipos destacados.
+            $250.000 en premios y hasta $2M en financiamiento inicial para equipos destacados.
           </p>
         </div>
       </section>
@@ -616,7 +735,7 @@ function App() {
             <h2>Todo para partir rápido sin perderse en pestañas.</h2>
           </div>
           <a className="btn small" href={links.dashboard} target="_blank" rel="noreferrer">
-            Dashboard Dev3pack <ExternalLink size={16} />
+            Panel Dev3pack <ExternalLink size={16} />
           </a>
         </div>
         <div className="resource-grid">
@@ -627,6 +746,47 @@ function App() {
               <span>{description}</span>
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="section ai-section" id="ia-abierta">
+        <div className="section-heading split">
+          <div>
+            <p className="kicker">IA gratis y abierta</p>
+            <h2>Herramientas para construir sin pagar una suscripción.</h2>
+          </div>
+          <a className="btn small" href={links.openRouter} target="_blank" rel="noreferrer">
+            Ver modelos gratis <ExternalLink size={16} />
+          </a>
+        </div>
+        <div className="ai-intro">
+          <BrainCircuit size={22} />
+          <p>
+            Prioriza herramientas gratuitas, de código abierto o con modelos gratis. Si
+            usas una API pagada, deja presupuesto y límites claros para no bloquear a
+            integrantes sin tarjeta o sin créditos.
+          </p>
+        </div>
+        <div className="ai-tool-grid">
+          {aiTools.map((tool) => (
+            <a className="ai-tool-card" href={tool.href} target="_blank" rel="noreferrer" key={tool.name}>
+              <div className="tool-card-top">
+                <Code2 size={20} />
+                <span>{tool.cost}</span>
+              </div>
+              <strong>{tool.name}</strong>
+              <p>{tool.fit}</p>
+              <small>{tool.detail}</small>
+            </a>
+          ))}
+        </div>
+        <div className="ai-guardrail">
+          <ShieldCheck size={22} />
+          <p>
+            Regla de seguridad: no pegues secretos en chats, guarda claves en variables
+            de entorno, aprueba comandos destructivos manualmente y revisa cada cambio de
+            agentes con acceso a archivos, navegador, mensajes o credenciales.
+          </p>
         </div>
       </section>
 
@@ -643,10 +803,10 @@ function App() {
         <div className="submission-layout">
           <div className="submission-copy">
             <ClipboardCheck size={24} />
-            <h3>Checklist antes del domingo</h3>
+            <h3>Lista de verificación antes del domingo</h3>
             <p>
-              La entrega ideal no es perfecta; es clara. Si tu demo falla, un buen README
-              y un video corto todavía pueden mostrar criterio, aprendizaje y dirección.
+              La entrega ideal no es perfecta; es clara. Si tu demostración falla, un buen
+              README y un video corto todavía pueden mostrar criterio, aprendizaje y dirección.
             </p>
           </div>
           <ol className="submission-list">
@@ -662,16 +822,16 @@ function App() {
 
       <section className="section perks-section" id="perks">
         <div className="section-heading">
-          <p className="kicker">Perks</p>
-          <h2>Créditos y herramientas para la semana de shipping.</h2>
+          <p className="kicker">Beneficios</p>
+          <h2>Créditos y herramientas para la semana de entrega.</h2>
         </div>
         <div className="featured-perk">
           <div>
-            <span className="badge">Start here</span>
-            <h3>Noah AI gratis para vibecoding</h3>
+            <span className="badge">Empieza aquí</span>
+            <h3>Noah AI gratis para desarrollo con IA</h3>
             <p>
-              Crea tu cuenta en NoahAI y completa el formulario con tu email de hackathon
-              para desbloquear acceso gratuito.
+              Crea tu cuenta en NoahAI y completa el formulario con tu correo de
+              hackathon para desbloquear acceso gratuito.
             </p>
           </div>
           <a className="btn primary" href="https://forms.gle/LNDjeS8YY8kvqb328" target="_blank" rel="noreferrer">
@@ -703,12 +863,12 @@ function App() {
               en Chile, con eventos mensuales y gobernanza abierta.
             </p>
             <a href={links.chiledao} target="_blank" rel="noreferrer">
-              Ver links de ChileDAO <ExternalLink size={15} />
+              Ver enlaces de ChileDAO <ExternalLink size={15} />
             </a>
           </article>
           <article>
             <Blocks size={22} />
-            <h3>Partners locales</h3>
+            <h3>Aliados locales</h3>
             <p>
               NodoZero, USACH, MBA USACH, Red de Mentores y Build Buddies aportan
               infraestructura, mentoría, comunidad y mirada de negocio.
@@ -721,11 +881,11 @@ function App() {
             <Rocket size={22} />
             <h3>Entrega final</h3>
             <p>
-              Mantén tu repo open-source, documenta el demo y sube tu proyecto desde
-              la plataforma Dev3pack antes del bloque de submissions.
+              Mantén tu repositorio como código abierto, documenta la demostración y
+              sube tu proyecto desde la plataforma Dev3pack antes del bloque de entregas.
             </p>
             <a href={links.submit} target="_blank" rel="noreferrer">
-              Ir a submissions <ExternalLink size={15} />
+              Ir a entregas <ExternalLink size={15} />
             </a>
           </article>
         </div>
@@ -733,14 +893,14 @@ function App() {
 
       <section className="section faq-section">
         <div className="section-heading">
-          <p className="kicker">FAQ rápido</p>
+          <p className="kicker">Preguntas rápidas</p>
           <h2>Lo esencial antes de llegar.</h2>
         </div>
         <div className="faq-list">
           <details open>
             <summary>¿Tengo que participar presencialmente?</summary>
             <p>
-              No. El hub de Santiago acelera equipos y aprendizaje el viernes 8 de mayo;
+              No. La sede de Santiago acelera equipos y aprendizaje el viernes 8 de mayo;
               la construcción y entrega continúan virtualmente hasta el domingo 10.
             </p>
           </details>
@@ -752,30 +912,52 @@ function App() {
             </p>
           </details>
           <details>
-            <summary>¿El proyecto debe ser open-source?</summary>
+            <summary>¿El proyecto debe ser de código abierto?</summary>
             <p>
-              Sí. La competencia premia proyectos abiertos y demostrables, con repo,
-              demo y una explicación clara del track elegido.
+              Sí. La competencia premia proyectos abiertos y demostrables, con repositorio,
+              demostración y una explicación clara de la categoría elegida.
             </p>
           </details>
           <details>
             <summary>¿Dónde pregunto si me bloqueo?</summary>
             <p>
               Usa el grupo técnico en Telegram, la comunidad de WhatsApp y las mentorías
-              del hub. La plataforma también muestra el mentor agent "Solene".
+              de la sede local. La plataforma también muestra el agente mentor "Solene".
             </p>
           </details>
         </div>
         <a className="btn ghost dark" href={links.faq} target="_blank" rel="noreferrer">
-          Ver FAQ oficial <ExternalLink size={16} />
+          Ver preguntas oficiales <ExternalLink size={16} />
         </a>
+      </section>
+
+      <section className="section glossary-section" id="glosario">
+        <div className="section-heading split">
+          <div>
+            <p className="kicker">Glosario bilingüe</p>
+            <h2>Palabras en inglés que aparecen por marca, evento o documentación.</h2>
+          </div>
+          <Languages size={30} aria-hidden="true" />
+        </div>
+        <p className="glossary-note">
+          El sitio está escrito en español. Los nombres de marcas se mantienen como marca;
+          los términos comunes en inglés se muestran con traducción para que nadie quede fuera.
+        </p>
+        <div className="glossary-grid">
+          {glossary.map(([term, translation]) => (
+            <div className="glossary-item" key={term}>
+              <strong>{term}</strong>
+              <span>{translation}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="partners" aria-labelledby="partners-title">
         <div className="section-heading split">
           <div>
             <p className="kicker">Organizan y acompañan</p>
-            <h2 id="partners-title">El hub chileno conectado al ecosistema global.</h2>
+            <h2 id="partners-title">La sede chilena conectada al ecosistema global.</h2>
           </div>
           <img className="usach-banner" src="/logos/event-banner.png" alt="Universidad de Santiago de Chile" />
         </div>
@@ -786,7 +968,7 @@ function App() {
             </div>
           ))}
         </div>
-        <div className="partner-chip-row" aria-label="Sponsors globales">
+        <div className="partner-chip-row" aria-label="Patrocinadores globales">
           {ecosystemPartners.map((partner) => (
             <span key={partner}>{partner}</span>
           ))}
@@ -796,16 +978,16 @@ function App() {
       <section className="host-section" id="host" aria-labelledby="host-title">
         <div className="host-panel">
           <div className="host-copy">
-            <p className="kicker">Host local</p>
-            <h2 id="host-title">Quién está detrás del hub Chile.</h2>
+            <p className="kicker">Anfitrión local</p>
+            <h2 id="host-title">Quién está detrás de la sede Chile.</h2>
             <p>
-              Soy Luis Felipe Abarca, felirami online: artista, builder y fundador de
+              Soy Luis Felipe Abarca, felirami en internet: artista, creador y fundador de
               Arcabot. Vengo del arte NFT, comunidades Web3 y herramientas para Farcaster;
-              hoy trabajo full-time en agentes de IA y en hacer que más personas puedan
+              hoy trabajo a tiempo completo en agentes de IA y en hacer que más personas puedan
               construir software útil sin esperar permiso.
             </p>
             <p>
-              Este hub existe para que estudiantes, devs, diseñadores y personas curiosas
+              Esta sede existe para que estudiantes, desarrolladores, diseñadores y personas curiosas
               tengan una entrada real a IA + Blockchain: con mentoría, comunidad, criterio
               técnico y espacio para preguntar cosas básicas sin vergüenza.
             </p>
@@ -842,12 +1024,12 @@ function App() {
         <div className="footer-main">
           <div className="footer-event">
             <strong>Dev3pack Global Hackathon x ChileDAO</strong>
-            <p>Hub Chile, viernes 8 de mayo de 2026, Sala EF402 FAE USACH.</p>
+            <p>Sede Chile, viernes 8 de mayo de 2026, Sala EF402 FAE USACH.</p>
           </div>
           <div className="footer-maker">
-            <span>Website hecho por felirami</span>
+            <span>Sitio web hecho por felirami</span>
             <p>
-              Developer chileno construyendo en arte, Web3, IA y entornos agénticos.
+              Desarrollador chileno construyendo en arte, Web3, IA y entornos agénticos.
               Fundador de Arcabot.
             </p>
             <div className="footer-socials">
@@ -861,12 +1043,12 @@ function App() {
                 arcabot.ai <Bot size={15} />
               </a>
               <a href={links.github} target="_blank" rel="noreferrer">
-                repo <Github size={15} />
+                Repositorio <Github size={15} />
               </a>
             </div>
           </div>
         </div>
-        <p className="attribution">Logos y banner desde el kit compartido para el hub Chile.</p>
+        <p className="attribution">Logos y banner desde el material compartido para la sede Chile.</p>
         <Sparkles className="footer-spark" size={24} aria-hidden="true" />
       </footer>
     </main>
