@@ -2,21 +2,34 @@ import {
   ArrowRight,
   Blocks,
   Bot,
+  BrainCircuit,
   CalendarDays,
   CheckCircle2,
+  ClipboardCheck,
   Clock3,
   Code2,
   ExternalLink,
+  FileCheck2,
   Gift,
+  Github,
   Globe2,
   GraduationCap,
   Handshake,
+  Lightbulb,
+  ListChecks,
   Mail,
   MapPin,
+  MessageSquareText,
+  Presentation,
+  Route,
   Rocket,
+  ShieldCheck,
   Sparkles,
+  TerminalSquare,
   Trophy,
   Users,
+  Wrench,
+  Zap,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -34,6 +47,7 @@ const links = {
   felirami: "https://felirami.com",
   farcaster: "https://farcaster.xyz/felirami",
   arcabot: "https://arcabot.ai",
+  github: "https://github.com/felirami/hackathon-dev3pack-chiledao",
 };
 
 const eventStart = new Date("2026-05-08T14:00:00-04:00").getTime();
@@ -187,6 +201,75 @@ const ecosystemPartners = [
   "USACH",
 ];
 
+const beginnerSteps = [
+  {
+    icon: Lightbulb,
+    title: "Parte por un problema chico",
+    text: "Elige algo concreto: una app de pagos para una feria, un asistente de voz para trámites, un dashboard de comunidad o una herramienta para estudiantes.",
+  },
+  {
+    icon: MessageSquareText,
+    title: "Explícaselo a la IA como a un teammate",
+    text: "Describe usuario, objetivo, datos, pantallas y restricciones. Pide primero un plan simple, luego código por partes y pruebas rápidas.",
+  },
+  {
+    icon: Wrench,
+    title: "Arma un prototipo usable",
+    text: "No necesitas una empresa completa. Necesitas una demo que abra, haga una cosa importante y muestre por qué Blockchain o IA aportan algo real.",
+  },
+  {
+    icon: Presentation,
+    title: "Cuenta la historia del demo",
+    text: "Prepara problema, solución, cómo funciona, qué track compite, qué aprendiste y qué harías si tuvieras una semana más.",
+  },
+];
+
+const technicalChecklist = [
+  {
+    icon: Github,
+    title: "Repo público",
+    text: "Código open-source con instrucciones para instalar, correr y revisar el demo.",
+  },
+  {
+    icon: FileCheck2,
+    title: "README claro",
+    text: "Problema, solución, stack, track elegido, links, integrantes y limitaciones honestas.",
+  },
+  {
+    icon: TerminalSquare,
+    title: "Demo reproducible",
+    text: "Deploy, video corto o pasos locales. Evita que el jurado tenga que adivinar.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Web3 sin humo",
+    text: "Si usas wallets, APIs, agentes o transacciones, explica qué es real, qué es mock y qué red usa.",
+  },
+];
+
+const builderModes = [
+  ["Nunca programé", "Usa NoahAI, v0 o Cursor para crear pantallas, conectar lógica básica y pedir explicaciones línea por línea."],
+  ["Diseño/producto", "Convierte el dolor del usuario en flujo, copy, demo y pitch. Un buen prototipo necesita criterio, no solo código."],
+  ["IT/dev", "Asegura arquitectura simple, README sólido, variables de entorno limpias, deploy estable y una integración técnica defendible."],
+  ["Founder/comunidad", "Valida si alguien lo usaría, arma narrativa, define métrica de éxito y piensa cómo vive después del domingo."],
+];
+
+const submissionChecklist = [
+  "Completa tu perfil y equipo en Dev3pack.",
+  "Elige uno o más tracks solo si puedes justificar el uso real.",
+  "Publica el repo y agrega licencia o nota open-source.",
+  "Incluye link de demo, video o capturas en el README.",
+  "Documenta qué partes fueron hechas con IA y qué decisiones tomó el equipo.",
+  "Sube la entrega en la plataforma antes del bloque oficial de submissions.",
+];
+
+const felipeHighlights = [
+  "Artista analógico y builder Web3 desde 2021.",
+  "Creador de WarpletScan, W2DBot, Hypersubs y proyectos Farcaster.",
+  "Hackathon builder en ETHGlobal Buenos Aires 2025 con NeetChat.",
+  "Fundador de Arcabot, explorando agentes de IA para trabajo real.",
+];
+
 function useCountdown() {
   const [now, setNow] = useState(Date.now());
 
@@ -229,9 +312,11 @@ function App() {
           </a>
           <div className="nav-links">
             <a href="#cuenta">Cuenta</a>
+            <a href="#guia">Guía</a>
             <a href="#agenda">Agenda</a>
             <a href="#tracks">Tracks</a>
             <a href="#recursos">Recursos</a>
+            <a href="#entrega">Entrega</a>
             <a href="#perks">Perks</a>
           </div>
         </nav>
@@ -275,16 +360,16 @@ function App() {
 
       <section className="stats-band" aria-label="Resumen global">
         <div className="stat">
-          <span>3.413</span>
-          <p>hackers globales inscritos</p>
+          <span>30+</span>
+          <p>hubs satélite en el mundo</p>
         </div>
         <div className="stat">
           <span>$10K+</span>
           <p>premios cash confirmados</p>
         </div>
         <div className="stat">
-          <span>12</span>
-          <p>teléfonos Seeker</p>
+          <span>May 12</span>
+          <p>Global Demo Day</p>
         </div>
         <div className="stat">
           <span>$2.500+</span>
@@ -367,6 +452,77 @@ function App() {
               Video en español <ExternalLink size={15} />
             </a>
           </div>
+        </div>
+      </section>
+
+      <section className="section guide-section" id="guia">
+        <div className="section-heading split">
+          <div>
+            <p className="kicker">Guía para llegar sin miedo</p>
+            <h2>No tienes que saberlo todo antes de construir.</h2>
+          </div>
+          <a className="btn small" href={links.spanishVideo} target="_blank" rel="noreferrer">
+            Ver intro en español <ExternalLink size={16} />
+          </a>
+        </div>
+        <div className="guide-grid">
+          <article className="guide-panel">
+            <div className="panel-title">
+              <Route size={21} />
+              <h3>Si nunca has vibe coded</h3>
+            </div>
+            <p>
+              Vibe coding es construir conversando con herramientas de IA. Tu trabajo
+              no es saber cada comando: es explicar bien el problema, probar lo que
+              sale y mejorar el prototipo con criterio.
+            </p>
+            <div className="step-list">
+              {beginnerSteps.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <div className="step-item" key={step.title}>
+                    <span className="step-number">{String(index + 1).padStart(2, "0")}</span>
+                    <Icon size={19} />
+                    <div>
+                      <strong>{step.title}</strong>
+                      <p>{step.text}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </article>
+          <article className="guide-panel">
+            <div className="panel-title">
+              <BrainCircuit size={21} />
+              <h3>Si vienes de IT o ya programas</h3>
+            </div>
+            <p>
+              La ventaja técnica está en reducir scope, integrar bien y entregar algo
+              reproducible. En una hackathon gana el equipo que demuestra valor rápido,
+              no el que promete más arquitectura.
+            </p>
+            <div className="technical-grid">
+              {technicalChecklist.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div className="technical-item" key={item.title}>
+                    <Icon size={20} />
+                    <strong>{item.title}</strong>
+                    <span>{item.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </article>
+        </div>
+        <div className="builder-modes" aria-label="Cómo aportar según tu perfil">
+          {builderModes.map(([mode, detail]) => (
+            <div className="builder-mode" key={mode}>
+              <strong>{mode}</strong>
+              <span>{detail}</span>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -471,6 +627,36 @@ function App() {
               <span>{description}</span>
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="section submission-section" id="entrega">
+        <div className="section-heading split">
+          <div>
+            <p className="kicker">Entrega sin perder puntos fáciles</p>
+            <h2>Haz que el jurado entienda tu proyecto en menos de dos minutos.</h2>
+          </div>
+          <a className="btn small" href={links.submit} target="_blank" rel="noreferrer">
+            Subir proyecto <ExternalLink size={16} />
+          </a>
+        </div>
+        <div className="submission-layout">
+          <div className="submission-copy">
+            <ClipboardCheck size={24} />
+            <h3>Checklist antes del domingo</h3>
+            <p>
+              La entrega ideal no es perfecta; es clara. Si tu demo falla, un buen README
+              y un video corto todavía pueden mostrar criterio, aprendizaje y dirección.
+            </p>
+          </div>
+          <ol className="submission-list">
+            {submissionChecklist.map((item) => (
+              <li key={item}>
+                <ListChecks size={17} />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
 
@@ -607,6 +793,51 @@ function App() {
         </div>
       </section>
 
+      <section className="host-section" id="host" aria-labelledby="host-title">
+        <div className="host-panel">
+          <div className="host-copy">
+            <p className="kicker">Host local</p>
+            <h2 id="host-title">Quién está detrás del hub Chile.</h2>
+            <p>
+              Soy Luis Felipe Abarca, felirami online: artista, builder y fundador de
+              Arcabot. Vengo del arte NFT, comunidades Web3 y herramientas para Farcaster;
+              hoy trabajo full-time en agentes de IA y en hacer que más personas puedan
+              construir software útil sin esperar permiso.
+            </p>
+            <p>
+              Este hub existe para que estudiantes, devs, diseñadores y personas curiosas
+              tengan una entrada real a IA + Blockchain: con mentoría, comunidad, criterio
+              técnico y espacio para preguntar cosas básicas sin vergüenza.
+            </p>
+            <div className="host-links">
+              <a href={links.felirami} target="_blank" rel="noreferrer">
+                <Globe2 size={16} /> felirami.com
+              </a>
+              <a href={links.farcaster} target="_blank" rel="noreferrer">
+                Farcaster <ExternalLink size={15} />
+              </a>
+              <a href={links.arcabot} target="_blank" rel="noreferrer">
+                Arcabot <Bot size={15} />
+              </a>
+            </div>
+          </div>
+          <div className="host-proof">
+            <div className="host-mark">
+              <Zap size={28} />
+              <span>felirami</span>
+            </div>
+            <ul>
+              {felipeHighlights.map((highlight) => (
+                <li key={highlight}>
+                  <CheckCircle2 size={16} />
+                  <span>{highlight}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <footer>
         <div className="footer-main">
           <div className="footer-event">
@@ -628,6 +859,9 @@ function App() {
               </a>
               <a href={links.arcabot} target="_blank" rel="noreferrer">
                 arcabot.ai <Bot size={15} />
+              </a>
+              <a href={links.github} target="_blank" rel="noreferrer">
+                repo <Github size={15} />
               </a>
             </div>
           </div>
